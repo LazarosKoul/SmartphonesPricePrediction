@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SmartPhone Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./app.js"></script>
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="img"></div>
+    <h2 class="header"> Select below smartphones' specs, to get an estimated price.</h2>
+    <form class="form">
+    <div class="grid-container-basic">
+        <div class="grid-item">
+            <h3>Brand Name:</h3>
+            <select class="brand" name="" id="uibrand-menu">
+            <option value="" selected="selected">Non Consider</option>
+            </select>
+        </div>
+        <div class="grid-item">
+            <h3>Processor's Cores:</h3>
+            <div class="switch-field">
+                <input type="radio" id="radio-cores-2" name="uiCores" value=2 checked/>
+                <label for="radio-cores-2">2</label>
+                <input type="radio" id="radio-cores-4" name="uiCores" value=4 />
+                <label for="radio-cores-4">4</label>
+                <input type="radio" id="radio-cores-6" name="uiCores" value=6 />
+                <label for="radio-cores-6">6</label>
+                <input type="radio" id="radio-cores-8" name="uiCores" value=8 />
+                <label for="radio-cores-8">8</label>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="grid-container-memory">
+        <div class="grid-item">
+            <h3>Ram:</h3>
+            <div class="switch-field">
+                <input type="radio" id="radio-ram-4" name="uiRam" value=4 checked />
+                <label for="radio-ram-4">4</label>
+                <input type="radio" id="radio-ram-8" name="uiRam" value=8 />
+                <label for="radio-ram-8">8</label>
+                <input type="radio" id="radio-ram-16" name="uiRam" value=16 />
+                <label for="radio-ram-16">16</label>
+                <input type="radio" id="radio-ram-32" name="uiRam" value=32 />
+                <label for="radio-ram-32">32</label>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <h3>Storage Memory:</h3>
+            <div class="switch-field">
+                <input type="radio" id="radio-storage-64" name="uiStorage" value=64 />
+                <label for="radio-storage-64">64</label>
+                <input type="radio" id="radio-storage-128" name="uiStorage" value=128 checked />
+                <label for="radio-storage-128">128</label>
+                <input type="radio" id="radio-storage-256" name="uiStorage" value=256 />
+                <label for="radio-storage-256">256</label>
+                <input type="radio" id="radio-storage-512" name="uiStorage" value=512 />
+                <label for="radio-storage-512">512</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container-cameras">
+        <div class="grid-item">
+            <h3>Rear Camera MP:</h3>
+            <input id="uiprimary_camera_rear" name="primary_camera_rear" type="number" value=30 min=10 max=200 step=5 />
+        </div>
+        <div class="grid-item">
+            <h3>Front Camera MP:</h3>
+            <input id="uiprimary_camera_front" name="primary_camera_front" type="number" value=10 min=5 max=0 step=5 />
+        </div>
+    </div>
+
+    <div class="grid-container-battery">
+        <div class="grid-item">
+            <h3>Battery:</h3>
+            <input id="uiBattery" name="Battery" type="number" value=5000 min=1821 max=220000 step=100 />
+        </div>
+
+        <div class="grid-item">
+            <h3>Fast charging:</h3>
+            <div class="switch-field">
+                <input type="radio" id="radio-fastcharging-none" name="uiFastcharging" value='None' checked />
+                <label for="radio-fastcharging-none">Non Consider</label>
+                <input type="radio" id="radio-fastcharging-yes" name="uiFastcharging" value='Yes'  />
+                <label for="radio-fastcharging-yes">Yes</label>
+                <input type="radio" id="radio-fastcharging-no" name="uiFastcharging" value='No'  />
+                <label for="radio-fastcharging-no">No</label>
+                </div>
+        </div>
+    </div>
+    <div class="grid-container-results">
+        <div class="grid-item">
+            <button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+        </div>
+        <div class="grid-item">
+            <h2 id="uiEstimatedPrice" class="result"> </h2> 
+        </div>
+    </div>
+</form>
+</body>
+</html>
