@@ -8,5 +8,5 @@ The process is described below:
 
 1. On a jupyter notebook I get the data, analyze and preproccess them. Then I built an XGBoostReggresor and hyperparameterize it. For these proccesses I used ```numpy```, ```pandas```, ```sci-kit learn``` and ```xgboost``` python libraries. The jupyter notebook and enviroment's requirements are in *model* folder.
 2. I built the app server with ```Flask``` python library. *server* folder contains the files for app server (api and requirements).
-3. I built the web server with ```HTML```, ```javascript``` and ```CSS```, which is served from ```nginx``` server. *client* folder contains theses files.
+3. I built the web server with ```HTML```, ```javascript``` and ```CSS```, which is served from ```nginx``` server. *client* folder contains these files.
 4. Finaly, I deploy the project on an ```EC2 Amazon Server```. So, anyone can use the trained model visiting the [link](http://ec2-16-170-255-26.eu-north-1.compute.amazonaws.com/).
